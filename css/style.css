@@ -1,0 +1,150 @@
+
+
+/* header */
+header nav ul{
+    border-bottom: 1px solid #ffffff6f;
+}
+header nav ul li{
+    position: relative;
+    padding: 0 20px;
+}
+header nav ul li.active ::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    left: 0;
+}
+header nav ul li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    left: 0;
+    transition: 0.5s;
+}
+header nav ul li:hover a::after{
+    width: 100%;
+}
+header{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+
+}
+/* carousel */
+.movie-carousel .carousel-inner .carousel-item{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    padding-top: 250px;
+}
+.movie-carousel  .carousel-inner .item1{
+    background-image: url("./../img/hero-1.jpg");
+}
+.movie-carousel .carousel-inner .item2{
+    background-image: url("./../img/hero-2.jpg");
+}
+.movie-carousel .carousel-inner .item3{
+    background-image: url("./../img/hero-3.jpg");
+}
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    /* background: transparent; lam backgound ko co mau */
+}
+/* cai nao co active se co background mau trang */
+.carousel-indicators li.active{
+    background-color: white;
+}
+/* lam cho nut bam ay vao ben trai */
+.carousel-indicators{
+    justify-content: flex-start;
+}
+.btn-trailler{
+    padding: 10px 30px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #fbbd61, #ec7532 );
+    border: none;
+    color: white;
+    position: relative;
+    /* cach phan du ma thang con no co */
+    overflow: hidden;
+}
+.btn-trailler::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: #ec7532;
+    top: 0;
+    left: -15%;
+    transform: skewX(30deg);
+    /* transform: skewX(30deg) cho xéo */
+    transition: all 0.5s;
+}
+.btn-trailler:hover::after{
+    width: 120%;
+}
+.btn-trailler i, span{
+    position: relative;
+    z-index: 2;
+}
+/* new in */
+.title__heading{
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+    padding-bottom: 20px;
+    position: relative;
+}
+.title__heading::after{
+    content: "";
+    display: block;
+    height: 5px;
+    width: 10%;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    position: absolute;
+    bottom: 0;
+}
+.col-md-3{
+    text-align: center;
+}
+.rating i{
+    color: crimson;
+}
+.slick-prev:before, .slick-next:before{
+    color: orange;
+}
+/* coming soon */
+#coming__soon{
+    margin-top: 5rem;
+    background-color: black;
+    height: 700px;
+    padding-top: 5rem;
+    color: white;
+    position: relative;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
